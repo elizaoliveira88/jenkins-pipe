@@ -1,10 +1,13 @@
-
 pipeline {
     agent any
     stages {
         stage('build') {
             steps {
-                bat echo '"Oi para nosso Jenkins"'
+                sh echo '"Oi para nosso Jenkins"'
+                sh ''' 
+                    echo 'nosso sabado'
+                    ls -la
+                '''
             }
         }
     }
